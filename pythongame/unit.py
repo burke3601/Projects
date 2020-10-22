@@ -20,6 +20,13 @@ class Unit:
     
 
 
+class Chef(Unit):
+    def __init__(self, name, position, patience = 10, attack_power = 2)
+    super().__init__(name,position,patience, attack_power)
+    self.inventory =[]
 
+    def __str__(self):
+        inv = ""
+        
        
     
