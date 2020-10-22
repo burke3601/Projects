@@ -1,12 +1,38 @@
 class Item:
     def __init__(self, name, position):
-        self.name = name 
         self.position = position
+        self.name = name
+    
+class Potion(Item):
+    def __init__(self, name, position):
+        super().__init__(name,position)
+        self.owner = None
+    
+    def use(self):
+        self.owner.health += 10
+        for i in range(len(self.owner.inventory)):
+            if self.owner.inventory[i] == self:
+                del self.owner.inventory[i]
+        self.owner = None
 
-class Toppings(Item):
-    def __init__(self, pepperoni, mushroom):
-        self.pepperoni = pepperoni
-        self.mushroom =
+    
+    def get_picked_up(self,owner):
+        self.owner = owner
+        self.position = [-555555,-555555]
 
 
-        #super().__init__(self, name, position)
+
+
+
+# class Item:
+#     def __init__(self, name, position):
+#         self.name = name 
+#         self.position = position
+
+# class Toppings(Item):
+#     def __init__(self, pepperoni, mushroom):
+#         self.pepperoni = pepperoni
+#         self.mushroom =
+
+
+#         #super().__init__(self, name, position)

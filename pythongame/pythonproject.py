@@ -1,5 +1,5 @@
-#python project
-from Unit import Unit
+
+from Unit import Unit, Chef
 
 name = input("What is your name?\n")
 
@@ -7,3 +7,6 @@ name = input("What is your name?\n")
 #     Unit("banana peel", [2,3])
 #     Unit("water spill", [4,1])
 # ]
+
+menu = ["Move up", "Move Down", "Move Left", "Move Right"]
+
