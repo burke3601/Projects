@@ -19,24 +19,29 @@ class Unit:
 
     def lose_patience(self, attack_power):
         self.patience = self.patience - attack_power
+
+
+    def attack(self,enemy):
+        enemy.lose_patience(self.attack_power)
     
 
 
 class Player(Unit):
     def __init__(self, name, position, patience = 10, attack_power = 2):
         super().__init__(name,position,patience,attack_power)
-        self.inventory = []
+        self.ingredients = []
 
     def __str__(self):
         inv = ""
-        for ivt in self.inventory:
+        
+        for ivt in self.ingredients:
             inv += " "+ivt.name
         return """
             Patience:%s
             position: %s
-            inventory: %s
+            ingredients:[%s]
         """ % (self.patience, self.position,inv)
 
     def pickup_item(self, item):
-        self.inventory.append(item)
+        self.ingredients.append(item)
         item.get_picked_up(self)
