@@ -6,7 +6,7 @@ menu = {
             "action_on":"menu",
             "action":"show_menu_item"
         }
-    },
+    }, 
     "Move":{
         "options":["up","down","left","right"],
         "accept_input":True,
@@ -16,11 +16,11 @@ menu = {
         }
     }
 }
+
 class Menu:
-    def __init__(self, player):
-        #added player for effect
+    def __init__(self,player):
         self.player = player
-        
+
     def show_menu_item(self, key):
         menu_item = menu[key]
         options = menu_item["options"]
@@ -39,24 +39,3 @@ class Menu:
                 #self.show_menu_item(value)
             if do_on == "player":
                 getattr(self.player, menu_item["on_accept"]["action"])(value)
-
-
-
-# menu = {
-#     "Main":{
-#         "options":["Move"],
-#         "accept_input":True,
-#         "on_accept":{
-#             "action_on":"menu",
-#             "action":"show_menu_item"
-#         }
-#     }, 
-#     "Move":{
-#         "options":["up","down","left","right"],
-#         "accept_input":True,
-#         "on_accept":{
-#             "action_on":"player",
-#             "action":"move"
-#         }
-#     }
-# }
