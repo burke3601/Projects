@@ -21,20 +21,14 @@ enemies = [
     Unit("trash", [1,5]),
     Unit("Gordon Ramsey", [1,4])
 ]
-
 items = [
     Item("mushrooms", [5,5]),
     Item("pepperonis", [4,5]),
     Item("crushed red pepper", [3,5]),
     Item("extra cheese", [2,5]),
-    Item("oven", [6,0])
-    
-    
+    Item("oven", [6,0])    
 ]
-
-menu = ["Move up", "Move Down", "Move Left", "Move Right"]
-
-
+# menu = ["Move up", "Move Down", "Move Left", "Move Right"]
 playing = True
 while playing:
     
@@ -43,7 +37,7 @@ while playing:
     
    
     try:
-        action = int(input("What is your choice?\n1 to move up\n2 to move down \n3 to move left \n4 to move right\n"))
+        action = int(input("Make a move:\n1 to move up\n2 to move down \n3 to move left \n4 to move right\n"))
     except ValueError:
         print("You must enter a valid entry.")
         action = None
@@ -101,7 +95,7 @@ while playing:
                     print("Invalid entry.")
                     
             else:
-                print(f"You found the {item.name}. Keep looking for more toppings")
+                print(f"You found the {item.name}. Do you want {item.name}?")
                 player.pickup_item(item)
 
     if player.patience <= 0:
@@ -112,9 +106,15 @@ while playing:
     if player.position >= [7,7]:
         print("Don't leave! Come back into the kitchen!")
         print(action)
-    if player.position <= [-1,-1]:
+    elif player.position <= [-1,-1]:
         print("Don't leave! Come back into the kitchen!")
         print(action)
+    # elif player.position >= [0-1]:
+    #     print("Don't leave! Come back into the kitchen!")
+    #     print(action)
+    # elif player.position <= [-1,0]:
+    #     print("Don't leave! Come back into the kitchen!")
+    #     print(action)
     
 
     

@@ -27,15 +27,15 @@ class Menu:
         for i in range(len(options)):
             print(f"{i+1}. {options[i]}")
         
-        if menu_item["accept_input"]:
-            res = int(input("Make your choice.\n"))
-            value = options[res-1]
-            print(f"You Chose {value}")
+        # if menu_item["accept_input"]:
+        #     res = int(input("Make your choice.\n"))
+        #     value = options[res-1]
+        #     print(f"You Chose {value}")
 
-            do_on = menu_item["on_accept"]["action_on"]
+        #     do_on = menu_item["on_accept"]["action_on"]
 
-            if do_on == "menu":
-                getattr(self, menu_item["on_accept"]["action"])(value)
-                #self.show_menu_item(value)
-            if do_on == "player":
-                getattr(self.player, menu_item["on_accept"]["action"])(value)
+        #     if do_on == "menu":
+        #         getattr(self, menu_item["on_accept"]["action"])(value)
+        #         #self.show_menu_item(value)
+        #     if do_on == "player":
+        #         getattr(self.player, menu_item["on_accept"]["action"])(value)
