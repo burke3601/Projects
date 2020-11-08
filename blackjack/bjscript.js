@@ -12,6 +12,7 @@ class Card {
         this.points = points;
         this.suit = suit;
         this.imageURL = '<img src = "cards-images/' + points + '_of_' + suit + '.png">';
+        // this.append.imageURL = '<img src = "cards-images/' + points + '_of_' + suit + '.png">';
 
     }
 }
@@ -26,24 +27,24 @@ function buildDeck() {
     }
 }
 
+
+
 buildDeck();
 console.log(deck);
 button.addEventListener('click', (e) =>{
     e.preventDefault()
-    dealer.innerHTML = '<img src = "cards-images/' + 3 + '_of_' + 'hearts' + '.png">'
+    dealer.innerHTML = '<img src = "cards-images/' + 6 + '_of_' + 'clubs' + '.png">';
+    dealer.innerHTML = '<img src = "cards-images/' + 7 + '_of_' + 'clubs' + '.png">';
+    hand.innerHTML = '<img src = "cards-images/' + 8 + '_of_' + 'clubs' + '.png">';
+    hand.innerHTML = '<img src = "cards-images/' + 9 + '_of_' + 'clubs' + '.png">';
 })
 
-// document.getElementById("deal-button").addEventListener("click", dealCards);
-
-// function dealCards(){
-//     document.
-// }
 
 
 
-// button.onclick = function(){
-//     button.addEventListener("click", dealCards)
-// }
+
+
+
 
 
 
