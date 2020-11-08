@@ -1,2 +1,3 @@
-# pythonproject
 # projects
+# python project
+#blackjack game
