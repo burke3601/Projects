@@ -17,8 +17,8 @@ class Hands{
     constructor(){
         this.total = 0
         this.cards = []
-        this.cardPoints = []
-        this.sortPoints = []
+        this.points = []
+        
     }
 }
 
@@ -58,8 +58,8 @@ function buildDeck() {
 function randomCard(cards) { 
 
     const random = Math.floor(Math.random() * 51);  
-    const cardValue = cards[random].value;
-    const cardSuit = cards[random].suit;
+    const value = cards[random].value;
+    const suit = cards[random].suit;
   }
 
 
@@ -82,8 +82,8 @@ buildDeck();
 console.log(deck);
 button.addEventListener('click', (e) =>{
     e.preventDefault()
-    dealer.innerHTML = randomCard()
-    hand.innerHTML = randomCard()
+    dealer.innerHTML = randomCard(cards)
+    hand.innerHTML = randomCard(cards)
 buttonTwo.addEventListener('click', (e) =>{
     e.preventDefault()
     
