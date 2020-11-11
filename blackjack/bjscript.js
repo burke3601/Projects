@@ -21,7 +21,7 @@ class Hands{
         
     }
 }
-
+ 
 
 class Deck{
     constructor(){
@@ -60,7 +60,7 @@ function randomCard(cards) {
     const random = Math.floor(Math.random() * 51);  
     const value = cards[random].value;
     const suit = cards[random].suit;
-  }
+  } 
 
 
 
