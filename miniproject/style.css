@@ -1,0 +1,9 @@
+li {
+    color: red;
+    border-bottom: black;
+}
+
+ul {
+    color: black;
+    list-style: none;
+}
