@@ -17,15 +17,15 @@ ajax("https://api.openbrewerydb.org/breweries?by_state=georgia",(results)=>{
     let data = JSON.parse(results)
     console.log(data)
         //send data from API to console
-    let ul = document.createElement("ul")
-    let ul1 = document.createElement("ul1")
-    ul.append(ul1)
+      
+    let testDiv = document.createElement("div")
+    
     
     data.forEach(item => {
 
         let liName = document.createElement("li")
         liName.innerHTML=(item.name)
-        ul1.append(liName)
+        testDiv.append(liName)
         document.body.append(ul)
         //this is appending the brewery name to the body
 
@@ -63,23 +63,18 @@ ajax("https://api.openbrewerydb.org/breweries?by_state=georgia",(results)=>{
         liName.addEventListener("click", exitOut);
         //adds event listener
 
-        // ul.classList.add("closeMe")
-        // liName.classList.add("liName")
-        nestedLi.classList.add("nestedList")
-        // nestedLiCity.classList.add("nestedList")
-        // nestedLiPhone.classList.add("nestedList")
-        // nestedLiWeb.classList.add("nestedList")
+        liName.classList.add("liName")
+
     })
 
 })
 
 
 const exitOut = (e) => {
-    if(e.target.classList === "nestedList") return;
-    
-    e.target.parentNode.remove()
-}
+    if (e.target.tagName = "button"){
+        e.target.parentNode.remove()
+}}
 
-//creates function to close 
+//creates function to close
 //need to figure out how to only apply to brewery name
 
